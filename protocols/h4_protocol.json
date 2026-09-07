@@ -1,0 +1,79 @@
+{
+  "parent_feasibility_commit": "d3246d9",
+  "parent_round0_commit": "21e6992",
+  "parent_round1_commit": "206742f",
+  "hypothesis": "Does historical study-level CV-of-CVs contain prospective information about subsequent insect abundance deterioration, beyond the conventional Round 1 baseline?",
+  "hypothesis_type": "LEVEL only; CHANGE excluded (Round 2A: underpowered)",
+  "predictor": {
+    "name": "C_g",
+    "formula": "SD_i(CV_i) / Mean_i(CV_i)",
+    "constituent_definition": "CV_i = sample SD / mean of raw Number over a constituent series' own usable years within the study's frozen 10-year historical window (>=2 usable years required)",
+    "scale": "raw abundance (Number), not log-transformed",
+    "sd_convention": "sample SD (ddof=1)",
+    "zero_mean_handling": "CV_i undefined (None), series excluded from constituent set for that window",
+    "contextual_not_universal": true
+  },
+  "context": "DataSource_ID",
+  "inferential_unit": "(DataSource_ID, one fixed 10-year historical window) pair; C_g broadcast to each outcome-contributing constituent series, analyzed with DataSource_ID clustering -- never plot- or series-level as the independent replication unit",
+  "effective_n_definition": "number of adequate (study, window) units meeting the adequacy gate below (expected ~19-20), NOT the number of constituent series or plots",
+  "minimum_constituent_series": 15,
+  "historical_window_years": 10,
+  "historical_window_definition": "first 10 elements of the sorted, deduplicated union of usable years across all of a study's Round-1-eligible series (rank-based, not calendar-year arithmetic)",
+  "chronology_design": "C",
+  "chronology_design_definition": "fixed 10-year history window (study's own first 10 union-years) then a fully held-out later period (all remaining union-years); non-overlapping, deterministic, no window search",
+  "future_outcome": {
+    "reused_from": "Round 1 (docs/HYPOTHESIS_PROTOCOL.md, unchanged formula)",
+    "formula": "OLS slope of log1p(Number) on Year over a constituent series' own Round-1 late window",
+    "h4_specific_eligibility_filter": "series.late_year_min > max(study.hist_years) -- i.e. that series' Round-1 late window must fall entirely after the study's H4 historical cutoff",
+    "no_new_outcome_formula_introduced": true,
+    "excluded_alternate_outcomes": ["biomass", "bioacoustics", "paleontology", "species_richness"]
+  },
+  "predicted_direction": {
+    "sign_on_C_g_coefficient": "positive",
+    "interpretation": "lower (tighter) historical C_g predicts a worse (more negative) future abundance trend; higher C_g predicts a better (less negative) trend",
+    "derivation": "direct analogy to Round 1's frozen H1_DIRECTION=+1 convention for D3/1, D4/1, Q90/50, applied one level up to C_g; derived from the original manuscript's motivating theory only, never from inspecting real outcome data",
+    "sidedness": "one-sided"
+  },
+  "baseline_model_M0": ["baseline_mean_log1p", "baseline_cv", "baseline_trend", "baseline_n", "baseline_span"],
+  "augmented_model_M1": ["baseline_mean_log1p", "baseline_cv", "baseline_trend", "baseline_n", "baseline_span", "C_g"],
+  "model_spec": {
+    "type": "ordinary least squares, standardized features (fit within training fold only)",
+    "fallback": "Ridge, alpha=1.0, triggered if training design matrix condition number > 1e8",
+    "reused_from": "Round 1 (src/round1_execute.py _fit_predict_fold), unchanged"
+  },
+  "cross_validation": {
+    "scheme": "leave-one-study-out (LOSO)",
+    "n_splits": "number of H4-eligible studies (expected ~19-20)",
+    "clustering_unit": "DataSource_ID"
+  },
+  "primary_statistic": {
+    "name": "delta_rmse",
+    "formula": "RMSE(M0) - RMSE(M1), pooled out-of-fold across LOSO folds",
+    "sign_convention": "positive = improvement from adding C_g (identical to Round 1)"
+  },
+  "secondary_statistic": {
+    "name": "C_g_coefficient",
+    "formula": "standardized OLS coefficient on C_g in the full-sample M1 fit",
+    "predicted_sign": "positive",
+    "note": "secondary only; cannot rescue a failed primary result"
+  },
+  "permutation_procedure": {
+    "scheme": "between-study permutation of the study-to-C_g mapping across H4-eligible studies; outcome, baseline features, and study membership held fixed",
+    "exchangeability_restriction": "permute only among the H4-eligible study set; never mixed with Round 1's series-level NC1/NC2",
+    "permutation_count": 10000,
+    "seed": 20260907,
+    "sidedness": "one-sided",
+    "p_value_formula": "(1 + count(delta_rmse_perm >= delta_rmse_observed)) / (10000 + 1)",
+    "tie_handling": "included in the >= comparison, no separate rule"
+  },
+  "alpha": 0.05,
+  "support_rule": {
+    "SUPPORTED": "delta_rmse > 0 AND primary permutation p <= 0.05 (one-sided)",
+    "NOT_SUPPORTED": "primary permutation p > 0.05, regardless of delta_rmse sign; OR delta_rmse <= 0 regardless of p",
+    "DIRECTIONALLY_OPPOSITE": "primary permutation test rejects the null against the predicted direction (delta_rmse reliably negative)",
+    "UNINTERPRETABLE_BLOCKED": "fewer than 10 H4-eligible studies survive every gate"
+  },
+  "stop_rule": "After H4 is executed: no alternate constituent-series thresholds, historical windows, chronological splits, robust CV variants, transformations, study removals, future outcomes, aggregations, subgroup searches, CHANGE hypothesis, permutation-count increases, or alternative model families. If H4 fails, the primary conclusion is that historical LEVEL CV-of-CVs, as prospectively defined, is not supported as an early-warning indicator in these data -- no weaker or requalified restatement is permitted without a wholly new, independently-frozen protocol.",
+  "executed": false,
+  "frozen_before_execution": true
+}

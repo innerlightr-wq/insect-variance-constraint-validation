@@ -1,0 +1,20 @@
+{
+  "files_scanned": [
+    "src/h4_pipeline.py",
+    "tests/test_h4_pipeline.py"
+  ],
+  "forbidden_pattern_hits": {
+    "src/h4_pipeline.py": [],
+    "tests/test_h4_pipeline.py": []
+  },
+  "H4_NO_PEEKING_CONFIRMED": true,
+  "checks": [
+    "no real-data predictor-outcome correlation computed",
+    "no H4 regression coefficient computed against real data",
+    "no H4 RMSE difference computed against real data",
+    "no H4 R^2 computed against real data",
+    "no H4 p-value computed against real data",
+    "no permutation result computed against real data",
+    "no subgroup effect computed against real data"
+  ]
+}
