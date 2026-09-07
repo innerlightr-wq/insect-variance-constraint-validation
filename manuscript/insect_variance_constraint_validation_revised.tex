@@ -5,6 +5,7 @@
 \usepackage{amssymb}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\PassOptionsToPackage{hyphens}{url}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{caption}
@@ -699,11 +700,18 @@ inferred from structural tightness alone.
 \section{Reproducibility and Data Availability}
 
 All frozen protocols, execution code, tests, and results referenced in
-this paper are version-controlled in the repository
-\texttt{insect-variance-constraint-validation}. \textbf{This repository
-is not yet published to a public remote at the time of this revision};
-no GitHub URL is stated here rather than inventing one, and this should
-be added once the repository is made public. The full research chronology:
+this paper are version-controlled in the public GitHub repository,
+\emph{insect-variance-constraint-validation}\footnote{\url{https://github.com/innerlightr-wq/insect-variance-constraint-validation}},
+the living, version-controlled computational record for this work. A
+permanent, citable archival deposit of this manuscript is separately
+held on Zenodo\footnote{\url{https://doi.org/10.5281/zenodo.22646397}}
+(De~Jes\'us, 2026); the Zenodo DOI is the version of record for citation
+purposes, while the GitHub repository is the record to consult for the
+current state of the code, tests, and results. The commit that produced
+this manuscript revision is \texttt{f37a7b3}, itself built entirely from
+the frozen, already-executed research chronology below (\texttt{f37a7b3}
+is a post-hoc manuscript-writing commit, not part of that pre-result
+freeze sequence). The full research chronology:
 
 \begin{center}
 \begin{tabular}{@{}ll@{}}
@@ -727,7 +735,9 @@ committed, per repository policy), but is fully re-downloadable and
 checksum-verifiable from its original source using the commands and
 checksums recorded in the repository's own data-provenance
 documentation. This repository's own license (for its original code and
-documentation) is to be finalized before any public release.
+documentation) has not yet been finalized as of this revision, even
+though the repository is now publicly hosted; no license should be
+assumed until one is explicitly added.
 
 \bibliographystyle{plainnat}
 \begin{thebibliography}{99}

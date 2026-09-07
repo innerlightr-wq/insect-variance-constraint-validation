@@ -1,6 +1,11 @@
 # insect-variance-constraint-validation
 
-**Independent computational validation project.** This repository tests
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22646397.svg)](https://doi.org/10.5281/zenodo.22646397)
+
+**Independent computational validation project.** This is the living
+computational/reproducibility record for the permanently archived
+manuscript below; see [Citation](#citation) for the archived version of
+record. This repository tests
 the hypothesis that constrained historical variance structure may predict
 subsequent insect community deterioration beyond variance magnitude alone
 — the central claim of the manuscript *"Variance Constraints, Not
@@ -13,6 +18,20 @@ It follows the same research discipline as this author's
 explicit provenance, exact inclusion/exclusion rules, blocked (grouped)
 validation, predeclared negative controls, and preservation of negative
 results.
+
+## Citation
+
+De Jesús, Elias. (2026). *Variance Constraints Do Not Improve Prediction
+of Subsequent Insect Abundance Change: A Prospective Validation Across
+Long-Term Monitoring Studies.* Zenodo.
+[https://doi.org/10.5281/zenodo.22646397](https://doi.org/10.5281/zenodo.22646397)
+
+This GitHub repository (`insect-variance-constraint-validation`) is the
+living, version-controlled computational record — frozen protocols,
+execution code, tests, and results — underlying the manuscript above.
+The Zenodo DOI is the permanent archival deposit and citable version of
+record; see `manuscript/insect_variance_constraint_validation_revised.pdf`
+for the manuscript itself.
 
 ## What this is
 
@@ -129,10 +148,11 @@ evidence for or against H1/H2.
 
 ## License
 
-- **Software** (`src/`, `tests/`): to be finalized before any public
-  release.
+- **Software** (`src/`, `tests/`): not yet finalized. The repository is
+  publicly hosted, but no license has been chosen for this code yet — do
+  not assume any particular license until one is explicitly added.
 - **Research documentation and computational results** (`docs/`,
-  `results/`, this README): to be finalized before any public release.
+  `results/`, this README): same status — not yet finalized.
 - **Third-party data**: the primary dataset (van Klink et al. 2020) is CC
   BY 4.0 (see `docs/DATA_PROVENANCE.md`); this repository does not commit
   it and does not claim to relicense it.
