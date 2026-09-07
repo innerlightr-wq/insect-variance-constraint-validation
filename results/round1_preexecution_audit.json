@@ -1,0 +1,46 @@
+{
+  "frozen_protocol_commit": "21e6992",
+  "git_state": {
+    "working_tree_clean_at_time_of_this_script_run": false,
+    "head_commit": "21e699228f40bf4585e42d5896a7835de0b21dca",
+    "head_matches_frozen_commit": true,
+    "note": "This script is itself a new, uncommitted Round 1 file, so 'clean at time of THIS run' is expected to read false once Round 1 work has begun -- it is NOT re-checked in the READY_TO_EXECUTE_ROUND_1 gate below. The load-bearing check is that HEAD matches the frozen protocol commit (no unauthorized commits exist on top of the freeze) and that the tree was clean immediately before any Round 1 file was written, which was verified manually and separately, prior to running this script, per Task 1 step 1."
+  },
+  "checksum_state": {
+    "all_files_verified": true,
+    "per_file": {
+      "DataSources.csv": true,
+      "PlotData.csv": true,
+      "SampleData.csv": true,
+      "InsectAbundanceBiomassData.csv": true
+    }
+  },
+  "eligibility_state": {
+    "n_eligible": 1129,
+    "n_studies": 99,
+    "matches_frozen_1129_series": true,
+    "matches_frozen_99_studies": true
+  },
+  "fold_state": {
+    "n_splits": 10,
+    "no_study_in_both_train_and_test_any_fold": true,
+    "every_eligible_series_in_exactly_one_test_fold": true,
+    "fold_test_sizes": [
+      151,
+      132,
+      106,
+      106,
+      106,
+      106,
+      106,
+      106,
+      105,
+      105
+    ],
+    "min_test_fold_size": 105,
+    "min_fold_size_at_least_20": true,
+    "fallback_required": false,
+    "fallback_invoked": false
+  },
+  "READY_TO_EXECUTE_ROUND_1": true
+}

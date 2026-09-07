@@ -1,0 +1,162 @@
+{
+  "per_stratum": {
+    "Air": {
+      "n_series": 406,
+      "n_studies": 40,
+      "cv_n_splits_used": 5,
+      "metric_effects": {
+        "D31": {
+          "coefficient_standardized": 0.03705824484751339,
+          "raw_p_value": 0.21696223107890078,
+          "cluster_robust_se_used": true,
+          "direction": "positive",
+          "matches_frozen_H1_direction": "True"
+        },
+        "D41": {
+          "coefficient_standardized": 0.03849275258606017,
+          "raw_p_value": 0.15709042563531733,
+          "cluster_robust_se_used": true,
+          "direction": "positive",
+          "matches_frozen_H1_direction": "True"
+        },
+        "Q9050": {
+          "coefficient_standardized": 0.0035131787649435764,
+          "raw_p_value": 0.733658477219022,
+          "cluster_robust_se_used": true,
+          "direction": "positive",
+          "matches_frozen_H1_direction": "True"
+        }
+      },
+      "M0_rmse": 0.15766088288866129,
+      "M1_rmse": 0.1575223802493994,
+      "delta_rmse": 0.00013850263926187822
+    },
+    "Water": {
+      "n_series": 326,
+      "n_studies": 30,
+      "cv_n_splits_used": 5,
+      "metric_effects": {
+        "D31": {
+          "coefficient_standardized": -0.03587439443728028,
+          "raw_p_value": 0.5361462047587552,
+          "cluster_robust_se_used": true,
+          "direction": "negative",
+          "matches_frozen_H1_direction": "False"
+        },
+        "D41": {
+          "coefficient_standardized": -0.04216916950023807,
+          "raw_p_value": 0.4346325360149198,
+          "cluster_robust_se_used": true,
+          "direction": "negative",
+          "matches_frozen_H1_direction": "False"
+        },
+        "Q9050": {
+          "coefficient_standardized": -0.008023358579080207,
+          "raw_p_value": 0.5630946819850735,
+          "cluster_robust_se_used": true,
+          "direction": "negative",
+          "matches_frozen_H1_direction": "False"
+        }
+      },
+      "M0_rmse": 0.19989011448533087,
+      "M1_rmse": 0.2012956931782259,
+      "delta_rmse": -0.0014055786928950376
+    },
+    "Herb layer": {
+      "n_series": 198,
+      "n_studies": 10,
+      "cv_n_splits_used": 5,
+      "metric_effects": {
+        "D31": {
+          "coefficient_standardized": -0.06856936466766553,
+          "raw_p_value": 0.092243087318669,
+          "cluster_robust_se_used": false,
+          "direction": "negative",
+          "matches_frozen_H1_direction": "False"
+        },
+        "D41": {
+          "coefficient_standardized": -0.07516417111827244,
+          "raw_p_value": 0.057112516355092444,
+          "cluster_robust_se_used": false,
+          "direction": "negative",
+          "matches_frozen_H1_direction": "False"
+        },
+        "Q9050": {
+          "coefficient_standardized": -0.022289782918070114,
+          "raw_p_value": 0.08297517654950892,
+          "cluster_robust_se_used": false,
+          "direction": "negative",
+          "matches_frozen_H1_direction": "False"
+        }
+      },
+      "M0_rmse": 0.25704604960833355,
+      "M1_rmse": 0.29790552468466097,
+      "delta_rmse": -0.04085947507632742
+    },
+    "Soil surface": {
+      "n_series": 136,
+      "n_studies": 16,
+      "cv_n_splits_used": 5,
+      "metric_effects": {
+        "D31": {
+          "coefficient_standardized": 0.1251448252629127,
+          "raw_p_value": 0.08898869707876671,
+          "cluster_robust_se_used": false,
+          "direction": "positive",
+          "matches_frozen_H1_direction": "True"
+        },
+        "D41": {
+          "coefficient_standardized": 0.11862149580719034,
+          "raw_p_value": 0.08568832899838069,
+          "cluster_robust_se_used": false,
+          "direction": "positive",
+          "matches_frozen_H1_direction": "True"
+        },
+        "Q9050": {
+          "coefficient_standardized": 0.006766210286345066,
+          "raw_p_value": 0.7553463409748369,
+          "cluster_robust_se_used": false,
+          "direction": "positive",
+          "matches_frozen_H1_direction": "True"
+        }
+      },
+      "M0_rmse": 0.22751516610104772,
+      "M1_rmse": 0.278254495947033,
+      "delta_rmse": -0.05073932984598528
+    }
+  },
+  "direction_consistency_across_strata": {
+    "D31": {
+      "signs_by_stratum": {
+        "Air": 1,
+        "Water": -1,
+        "Herb layer": -1,
+        "Soil surface": 1
+      },
+      "all_same_sign": false
+    },
+    "D41": {
+      "signs_by_stratum": {
+        "Air": 1,
+        "Water": -1,
+        "Herb layer": -1,
+        "Soil surface": 1
+      },
+      "all_same_sign": false
+    },
+    "Q9050": {
+      "signs_by_stratum": {
+        "Air": 1,
+        "Water": -1,
+        "Herb layer": -1,
+        "Soil surface": 1
+      },
+      "all_same_sign": false
+    }
+  },
+  "excluded_strata": [
+    "Trees",
+    "Underground"
+  ],
+  "excluded_reason": "fail the frozen Task 14 adequacy gate (>=30 series AND >=5 studies) -- see docs/HYPOTHESIS_PROTOCOL.md Sec.6"
+}

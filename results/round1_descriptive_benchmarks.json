@@ -1,0 +1,26 @@
+{
+  "cv_of_cvs": {
+    "label": "DESCRIPTIVE / BENCHMARK -- not evidence for H1/H2",
+    "n_series": 1613,
+    "mean_cv": 0.7362655454700296,
+    "sd_cv": 0.3772363588348317,
+    "cv_of_cvs": 0.5123645417822793,
+    "median_cv": 0.67530799932425,
+    "range_cv": [
+      0.0,
+      4.0
+    ],
+    "caveat": "finite empirical dispersion != ecological upper bound -- see docs/CV_OF_CV_INTERPRETATION.md; this number is not re-interpreted here."
+  },
+  "taylors_law": {
+    "label": "DESCRIPTIVE / BENCHMARK -- not evidence for H1/H2",
+    "n_series_used": 1129,
+    "n_excluded_zero_mean_or_variance": 0,
+    "taylor_b_slope": 1.9302043129279995,
+    "taylor_log_a_intercept": -0.3435957977209403,
+    "r_squared": 0.9735090095142099,
+    "manuscript_reported_b": 1.96,
+    "manuscript_reported_r2": 0.96,
+    "note": "independently computed from this project's own eligible-series table; not assumed to match the manuscript's reported values."
+  }
+}
