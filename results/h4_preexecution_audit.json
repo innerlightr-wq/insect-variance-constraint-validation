@@ -1,0 +1,48 @@
+{
+  "commits_exist": {
+    "round0": true,
+    "round1": true,
+    "round2a": true,
+    "h4_freeze": true
+  },
+  "working_tree_clean_before_h4_execution_files": false,
+  "head_commit": "3e30670b1a1a50510338c96bbb131b54e89681c4",
+  "h4_protocol_files_match_freeze_commit": true,
+  "test_summary_line": "106 passed in 47.89s",
+  "tests_pass_106": true,
+  "frozen_choices_summary": {
+    "minimum_constituent_series": 15,
+    "historical_window_years": 10,
+    "chronology_design": "fixed 10-year history window (study's own first 10 union-years) then a fully held-out later period (all remaining union-years); non-overlapping, deterministic, no window search",
+    "predictor": "SD_i(CV_i) / Mean_i(CV_i)",
+    "outcome": "OLS slope of log1p(Number) on Year over a constituent series' own Round-1 late window",
+    "outcome_eligibility_filter": "series.late_year_min > max(study.hist_years) -- i.e. that series' Round-1 late window must fall entirely after the study's H4 historical cutoff",
+    "predicted_direction": "positive",
+    "M0": [
+      "baseline_mean_log1p",
+      "baseline_cv",
+      "baseline_trend",
+      "baseline_n",
+      "baseline_span"
+    ],
+    "M1": [
+      "baseline_mean_log1p",
+      "baseline_cv",
+      "baseline_trend",
+      "baseline_n",
+      "baseline_span",
+      "C_g"
+    ],
+    "primary_statistic": "RMSE(M0) - RMSE(M1), pooled out-of-fold across LOSO folds",
+    "permutation_count": 10000,
+    "seed": 20260907,
+    "alpha": 0.05,
+    "support_rule": {
+      "SUPPORTED": "delta_rmse > 0 AND primary permutation p <= 0.05 (one-sided)",
+      "NOT_SUPPORTED": "primary permutation p > 0.05, regardless of delta_rmse sign; OR delta_rmse <= 0 regardless of p",
+      "DIRECTIONALLY_OPPOSITE": "primary permutation test rejects the null against the predicted direction (delta_rmse reliably negative)",
+      "UNINTERPRETABLE_BLOCKED": "fewer than 10 H4-eligible studies survive every gate"
+    }
+  },
+  "READY_FOR_H4_EXECUTION": true
+}
