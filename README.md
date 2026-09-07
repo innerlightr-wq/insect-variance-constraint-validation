@@ -148,14 +148,19 @@ evidence for or against H1/H2.
 
 ## License
 
-- **Software** (`src/`, `tests/`): not yet finalized. The repository is
-  publicly hosted, but no license has been chosen for this code yet — do
-  not assume any particular license until one is explicitly added.
-- **Research documentation and computational results** (`docs/`,
-  `results/`, this README): same status — not yet finalized.
+This repository uses a dual-license structure — see `LICENSE` for the
+full scope notice.
+
+- **Original software/code** (`src/`, `tests/`,
+  `manuscript/make_figures.py`): [MIT License](LICENSE-MIT).
+- **Original manuscript, documentation, and figures** (`docs/`,
+  `results/`, `manuscript/` excluding third-party data, this README):
+  [Creative Commons Attribution 4.0 International](LICENSE-CC-BY-4.0)
+  (CC BY 4.0).
 - **Third-party data**: the primary dataset (van Klink et al. 2020) is CC
-  BY 4.0 (see `docs/DATA_PROVENANCE.md`); this repository does not commit
-  it and does not claim to relicense it.
+  BY 4.0 under its own terms (see `docs/DATA_PROVENANCE.md`); this
+  repository does not commit it and neither license above grants any
+  right over it or relicenses it as project content.
 
 ## Author
 

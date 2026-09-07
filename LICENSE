@@ -1,7 +1,35 @@
-License: not yet finalized. This repository is publicly hosted, but no
-license has been chosen for its original code or documentation.
+# Licensing
 
-This repository will not redistribute the primary third-party dataset
-(van Klink et al. 2020, CC BY 4.0 — see docs/DATA_PROVENANCE.md and
-data/README.md); the license covering this repository's own original code
-and research documentation has not yet been chosen.
+This repository uses a dual-license structure.
+
+## Software and source code
+
+Original software, analysis scripts, utilities, and test code authored
+for this project (`src/`, `tests/`, `manuscript/make_figures.py`, and
+other original executable scripts) are licensed under the MIT License.
+
+See: `LICENSE-MIT`
+
+## Research and documentation
+
+Original manuscript text, documentation, figures, and other original
+research content authored for this project (`docs/`, `results/`,
+`manuscript/` excluding third-party data, and this repository's README)
+are licensed under the Creative Commons Attribution 4.0 International
+License (CC BY 4.0).
+
+See: `LICENSE-CC-BY-4.0`
+
+## Third-party materials
+
+Third-party datasets, source materials, and other externally authored
+content are not relicensed by this repository and remain subject to
+their original licenses, terms of use, and attribution requirements.
+
+In particular, the underlying insect monitoring dataset
+(van Klink et al. 2020, CC BY 4.0, Knowledge Network for Biocomplexity,
+DOI: 10.5063/F11V5C9V — see `docs/DATA_PROVENANCE.md`) is third-party
+research data and is not covered by the MIT or CC BY 4.0 licenses in
+this repository. It is not committed to this repository (see
+`data/README.md`) and must not be described as MIT- or CC-BY-4.0-licensed
+project content.
