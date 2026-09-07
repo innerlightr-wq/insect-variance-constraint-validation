@@ -1,0 +1,87 @@
+{
+  "pool_size": 1129,
+  "pool_mean": 0.7683193227960721,
+  "pool_sd": 0.38375782593475977,
+  "bootstrap_resamples": 1000,
+  "seed": 20260907,
+  "by_group_size": {
+    "3": {
+      "n_resamples": 1000,
+      "frequency_undefined": 0.0,
+      "frequency_near_zero_denominator": 0.0,
+      "mean_estimate": 0.36620398780533436,
+      "sd_of_estimate_across_resamples": 0.19709189088692017,
+      "ci_2_5_97_5": [
+        0.06738797505677022,
+        0.8466635245975079
+      ],
+      "ci_width": 0.7792755495407377,
+      "mean_single_extreme_sensitivity_shift": 0.6804808729995803
+    },
+    "5": {
+      "n_resamples": 1000,
+      "frequency_undefined": 0.0,
+      "frequency_near_zero_denominator": 0.0,
+      "mean_estimate": 0.3940067734762842,
+      "sd_of_estimate_across_resamples": 0.1665545862325612,
+      "ci_2_5_97_5": [
+        0.12330223668215914,
+        0.7957593431340053
+      ],
+      "ci_width": 0.6724571064518462,
+      "mean_single_extreme_sensitivity_shift": 0.6761081455243347
+    },
+    "10": {
+      "n_resamples": 1000,
+      "frequency_undefined": 0.0,
+      "frequency_near_zero_denominator": 0.0,
+      "mean_estimate": 0.4437246038477741,
+      "sd_of_estimate_across_resamples": 0.16386341845576596,
+      "ci_2_5_97_5": [
+        0.2155597603555081,
+        0.9337635611486184
+      ],
+      "ci_width": 0.7182038007931102,
+      "mean_single_extreme_sensitivity_shift": 0.5548012393628269
+    },
+    "15": {
+      "n_resamples": 1000,
+      "frequency_undefined": 0.0,
+      "frequency_near_zero_denominator": 0.0,
+      "mean_estimate": 0.44178183968056417,
+      "sd_of_estimate_across_resamples": 0.13586165729935856,
+      "ci_2_5_97_5": [
+        0.2659546731675832,
+        0.7872188657314241
+      ],
+      "ci_width": 0.5212641925638408,
+      "mean_single_extreme_sensitivity_shift": 0.4927143158079491
+    },
+    "20": {
+      "n_resamples": 1000,
+      "frequency_undefined": 0.0,
+      "frequency_near_zero_denominator": 0.0,
+      "mean_estimate": 0.4588553090014818,
+      "sd_of_estimate_across_resamples": 0.13811344730348696,
+      "ci_2_5_97_5": [
+        0.26846443501714,
+        0.8391067142830146
+      ],
+      "ci_width": 0.5706422792658746,
+      "mean_single_extreme_sensitivity_shift": 0.41835557561732956
+    },
+    "30": {
+      "n_resamples": 1000,
+      "frequency_undefined": 0.0,
+      "frequency_near_zero_denominator": 0.0,
+      "mean_estimate": 0.4701742902364894,
+      "sd_of_estimate_across_resamples": 0.12076022549903365,
+      "ci_2_5_97_5": [
+        0.3017088363665725,
+        0.7878338649006262
+      ],
+      "ci_width": 0.48612502853405376,
+      "mean_single_extreme_sensitivity_shift": 0.32871041744338836
+    }
+  }
+}

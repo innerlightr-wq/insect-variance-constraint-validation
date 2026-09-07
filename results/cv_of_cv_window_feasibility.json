@@ -1,0 +1,66 @@
+{
+  "3": {
+    "n_nonoverlapping_windows_total": 761,
+    "n_rolling_windows_total": 1991,
+    "nonoverlapping_meeting_threshold": {
+      "3": 326,
+      "5": 231,
+      "10": 147,
+      "20": 93
+    },
+    "rolling_meeting_threshold": {
+      "3": 897,
+      "5": 644,
+      "10": 409,
+      "20": 255
+    }
+  },
+  "5": {
+    "n_nonoverlapping_windows_total": 477,
+    "n_rolling_windows_total": 1793,
+    "nonoverlapping_meeting_threshold": {
+      "3": 216,
+      "5": 158,
+      "10": 96,
+      "20": 58
+    },
+    "rolling_meeting_threshold": {
+      "3": 854,
+      "5": 632,
+      "10": 395,
+      "20": 248
+    }
+  },
+  "7": {
+    "n_nonoverlapping_windows_total": 353,
+    "n_rolling_windows_total": 1595,
+    "nonoverlapping_meeting_threshold": {
+      "3": 165,
+      "5": 122,
+      "10": 73,
+      "20": 48
+    },
+    "rolling_meeting_threshold": {
+      "3": 784,
+      "5": 584,
+      "10": 367,
+      "20": 230
+    }
+  },
+  "10": {
+    "n_nonoverlapping_windows_total": 268,
+    "n_rolling_windows_total": 1298,
+    "nonoverlapping_meeting_threshold": {
+      "3": 120,
+      "5": 88,
+      "10": 54,
+      "20": 34
+    },
+    "rolling_meeting_threshold": {
+      "3": 660,
+      "5": 493,
+      "10": 321,
+      "20": 197
+    }
+  }
+}

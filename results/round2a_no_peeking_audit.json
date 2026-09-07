@@ -1,0 +1,13 @@
+{
+  "files_scanned": [
+    "src/round2a_cv_of_cv_feasibility.py",
+    "src/run_round2a.py",
+    "src/round2a_precheck.py"
+  ],
+  "forbidden_pattern_hits": {
+    "src/round2a_cv_of_cv_feasibility.py": [],
+    "src/run_round2a.py": [],
+    "src/round2a_precheck.py": []
+  },
+  "NO_PEEKING_CONFIRMED": true
+}

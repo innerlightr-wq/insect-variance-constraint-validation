@@ -1,0 +1,17 @@
+{
+  "A_50_50": {
+    "n_studies_retained": 38,
+    "median_future_years_available": 9.5,
+    "leakage_risk": "none by construction -- split is by unique-year rank, mirroring insect_variance_protocol.chronological_split's own assertion pattern; historical portion never reads a future-portion year."
+  },
+  "B_60_40": {
+    "n_studies_retained": 38,
+    "median_future_years_available": 8.0,
+    "leakage_risk": "none by construction -- split is by unique-year rank, mirroring insect_variance_protocol.chronological_split's own assertion pattern; historical portion never reads a future-portion year."
+  },
+  "C_fixed_10yr_history_plus_heldout_later": {
+    "n_studies_retained": 35,
+    "median_future_years_available": 10.0,
+    "leakage_risk": "none by construction, same rationale as designs A/B."
+  }
+}

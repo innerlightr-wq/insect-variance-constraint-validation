@@ -1,0 +1,12 @@
+{
+  "round0_commit_exists": true,
+  "round1_commit_exists": true,
+  "working_tree_clean_before_round2a_files": false,
+  "head_commit": "206742f32a7d509b28792d6c397525a5e487740b",
+  "frozen_paths_zero_diff": true,
+  "frozen_paths_diff_output": "",
+  "test_run_summary_line": "63 passed in 36.83s",
+  "test_run_returncode": 0,
+  "tests_pass": true,
+  "INTEGRITY_OK": true
+}

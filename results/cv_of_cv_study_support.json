@@ -1,0 +1,37 @@
+{
+  "threshold_summary": {
+    "2": {
+      "n_studies": 66,
+      "n_series_represented": 1096
+    },
+    "3": {
+      "n_studies": 52,
+      "n_series_represented": 1068
+    },
+    "5": {
+      "n_studies": 38,
+      "n_series_represented": 1019
+    },
+    "10": {
+      "n_studies": 25,
+      "n_series_represented": 935
+    },
+    "15": {
+      "n_studies": 20,
+      "n_series_represented": 871
+    },
+    "20": {
+      "n_studies": 17,
+      "n_series_represented": 822
+    },
+    "30": {
+      "n_studies": 10,
+      "n_series_represented": 657
+    },
+    "50": {
+      "n_studies": 5,
+      "n_series_represented": 455
+    }
+  },
+  "n_studies_with_eligible_series": 99
+}

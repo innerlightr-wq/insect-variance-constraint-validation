@@ -1,0 +1,42 @@
+{
+  "frozen_commits_referenced": ["21e6992", "206742f"],
+  "no_peeking_confirmed": true,
+  "verdict": "MARGINALLY READY",
+  "verdict_scope": "LEVEL-only H4, restricted to studies meeting a stricter (>=15-series) adequacy bar than this round's exploratory >=5 threshold",
+  "change_verdict": "UNDERPOWERED",
+  "evidence_summary": {
+    "studies_with_ge1_eligible_series": 99,
+    "studies_with_ge5_eligible_series": 38,
+    "studies_with_ge15_eligible_series": 20,
+    "studies_with_ge30_eligible_series": 10,
+    "studies_ever_achieving_ge15_contemporaneous": 19,
+    "level_feasible_studies_at_ge5_bar": 38,
+    "level_feasible_studies_at_ge15_bar_estimate": "~19-20",
+    "change_feasible_studies_ge3_windows": 14,
+    "change_feasible_studies_ge4_windows": 4,
+    "change_feasible_studies_ge5_windows": 3,
+    "estimator_ci_width_n15": 0.5213,
+    "estimator_ci_width_n30": 0.4861,
+    "estimator_extreme_sensitivity_n30": 0.3287,
+    "heterogeneity_confound_median_plots_meeting_threshold": 17.5,
+    "heterogeneity_confound_median_plots_not_meeting_threshold": 2.0
+  },
+  "recommended_h4_design": {
+    "inferential_unit": "(DataSource_ID, one historical window)",
+    "context_grouping": "DataSource_ID",
+    "minimum_series_per_meta_window": 15,
+    "historical_window_length_years": 10,
+    "primary_submetric": "LEVEL",
+    "change_included_in_primary_family": false,
+    "chronological_split": "Design C: fixed 10-year history window + fully held-out later period",
+    "minimum_valid_historical_windows_required": 1,
+    "overlapping_windows_used": false,
+    "zero_handling": "unchanged from frozen aggregate_within_year (sum, min_count=1) and coefficient_of_variation (None if mean=0)",
+    "abundance_scale": "raw (not log-transformed) -- CV is scale-invariant",
+    "clustering_for_inference": "DataSource_ID cluster-robust SEs, supplemented with permutation-based null given the small effective cluster count",
+    "minimum_adequacy_gate": ">=15 contemporaneous Round-1-eligible series within the chosen 10-year historical window",
+    "single_or_multiple_hypotheses": "single H4 hypothesis, tested via an H1-style individual-coefficient check and an H2-style incremental-out-of-sample-value check, mirroring Round 1's own H1/H2 structure"
+  },
+  "executed": false,
+  "note": "This is a feasibility recommendation only. No H4 hypothesis test was run in this round."
+}
