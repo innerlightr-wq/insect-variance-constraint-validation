@@ -1,0 +1,6 @@
+License: to be finalized before any public release.
+
+This repository will not redistribute the primary third-party dataset
+(van Klink et al. 2020, CC BY 4.0 — see docs/DATA_PROVENANCE.md and
+data/README.md); the license covering this repository's own original code
+and research documentation has not yet been chosen.

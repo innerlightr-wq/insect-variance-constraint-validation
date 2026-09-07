@@ -1,0 +1,93 @@
+{
+  "eligibility": {
+    "n_candidate_series": 1613,
+    "n_eligible": 1129,
+    "n_excluded": 484,
+    "exclusion_reasons": {
+      "fewer than 10 usable years": 484
+    },
+    "min_total_points_rule": 10,
+    "min_window_points_rule": 5
+  },
+  "studies": {
+    "n_eligible_studies": 99
+  },
+  "series_length_distribution": {
+    "median_usable_years": 15.0,
+    "median_early_window": 8.0,
+    "median_late_window": 7.0,
+    "min_usable_years": 10,
+    "max_usable_years": 80
+  },
+  "marginal_future_trend_distribution": {
+    "n_with_valid_trend": 1129,
+    "n_undefined": 0,
+    "mean": -0.018352211044637634,
+    "median": -0.013798930287123463,
+    "std": 0.1664717103847518,
+    "q10": -0.20005807295920797,
+    "q90": 0.1614801436678157,
+    "fraction_negative_slope": 0.5597874224977857,
+    "note": "MARGINAL distribution of the outcome variable alone -- no predictor is referenced anywhere in this computation."
+  },
+  "stratum_adequacy_gate": [
+    {
+      "Stratum": "Air",
+      "n_series": 406,
+      "n_studies": 40,
+      "adequate_for_H3": true
+    },
+    {
+      "Stratum": "Herb layer",
+      "n_series": 199,
+      "n_studies": 10,
+      "adequate_for_H3": true
+    },
+    {
+      "Stratum": "Soil surface",
+      "n_series": 136,
+      "n_studies": 16,
+      "adequate_for_H3": true
+    },
+    {
+      "Stratum": "Trees",
+      "n_series": 47,
+      "n_studies": 4,
+      "adequate_for_H3": false
+    },
+    {
+      "Stratum": "Underground",
+      "n_series": 13,
+      "n_studies": 4,
+      "adequate_for_H3": false
+    },
+    {
+      "Stratum": "Water",
+      "n_series": 328,
+      "n_studies": 30,
+      "adequate_for_H3": true
+    }
+  ],
+  "grouped_fold_report": {
+    "n_splits_used": 10,
+    "fold_test_sizes": [
+      151,
+      132,
+      106,
+      106,
+      106,
+      106,
+      106,
+      106,
+      105,
+      105
+    ],
+    "fallback_triggered": false
+  },
+  "gate": {
+    "verdict": "READY",
+    "reasons": [
+      "1129 eligible series across 99 studies; grouped 10-fold validation is feasible with a minimum of 105 series per test fold"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+# Third-party primary dataset is never committed, even though its license
+# (CC BY 4.0) permits redistribution -- same repo-hygiene convention as the
+# linear-a-constraint-validation project. Everything under data/ is fetched
+# or generated locally and rebuilt from documented upstream sources with
+# recorded checksums. See docs/DATA_PROVENANCE.md and data/README.md.
+data/raw/
+data/processed/
+data/*
+!data/README.md
+!data/provenance.json
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+.venv/
+
+# OS noise
+.DS_Store

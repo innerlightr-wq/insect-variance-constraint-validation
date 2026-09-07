@@ -1,0 +1,101 @@
+{
+  "dataset_title": "A global database of long-term changes in insect assemblages",
+  "citation": "van Klink, R., D.E. Bowler, J.M. Chase, O. Comay, M.M. Driessen, S.K.M. Ernest, A. Gentile, F. Gilbert, K. Gongalsky, J. Owen, G. Pe'er, I. Pe'er, V.H. Resh, I. Rochlin, S. Schuch, A.E. Swengel, S.R. Swengel, T.L. Valone, R. Vermeulen, and T. Wepprich. 2020. A global database of long-term changes in insect assemblages. Knowledge Network for Biocomplexity.",
+  "doi": "doi:10.5063/F11V5C9V",
+  "doi_url": "https://doi.org/10.5063/F11V5C9V",
+  "repository_provider": "Knowledge Network for Biocomplexity (KNB), a DataONE member node",
+  "landing_page_resolved_to": "https://knb.ecoinformatics.org/view/doi:10.5063/F11V5C9V",
+  "pub_date": "2020",
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "license_source": "EML <intellectualRights> element of the metadata document, verified directly, not assumed",
+  "redistribution_permitted": true,
+  "redistribution_policy_this_repo": "raw data NOT committed regardless of permissive license, for repo-hygiene reasons (see .gitignore); provenance, checksums, and download instructions are committed instead",
+  "dataone_metadata_pid": "doi:10.5063/F11V5C9V",
+  "dataone_metadata_sysmeta": {
+    "formatId": "eml://ecoinformatics.org/eml-2.1.1",
+    "size_bytes": 88855,
+    "sha1_reported_by_dataone": "8b8367b81bb92c1d5cb02baee2eaef8eb7f3f347",
+    "dateUploaded": "2020-04-08T15:43:46.219+00:00",
+    "dateSysMetadataModified": "2020-10-01T14:15:11.374+00:00",
+    "archived": false,
+    "obsoletes": "urn:uuid:b768975a-4202-4a0b-868d-01d462518b9e",
+    "obsoletedBy": "urn:uuid:e2501439-4af9-438f-8bae-abeef1459727",
+    "note": "IMPORTANT DISCLOSED FINDING: the DOI-registered PID (doi:10.5063/F11V5C9V) itself remains resolvable and is the exact object cited by the manuscript's DOI, but DataONE's own sysmeta shows it has an `obsoletedBy` pointer to a newer, UUID-identified revision that never received its own separate DOI. This repository intentionally uses the exact DOI-pinned version (matching what a reader following the manuscript's citation would retrieve), not the newer unversioned revision. This is disclosed, not silently resolved either way."
+  },
+  "download_date_utc": "2026-09-07",
+  "downloaded_via": "DataONE Member Node REST API (v2), object endpoint, resolved from the DOI through https://cn.dataone.org/cn/v2/resolve/",
+  "files": [
+    {
+      "entity_name": "DataSources.csv",
+      "dataone_pid": "urn:uuid:82b3f580-abd2-4bb3-b0be-a9e2a34136eb",
+      "size_bytes": 30660,
+      "md5_reported_by_dataone": "8106974fee871582f7333b27e2e2d6a3",
+      "md5_verified_locally": "8106974fee871582f7333b27e2e2d6a3",
+      "sha256_computed_locally": "222ba063a565d46a6c8707e2e4816505bd9db7cb401e3795cd727c8cb1d740f2",
+      "format": "text/csv",
+      "role": "one row per original study/data source"
+    },
+    {
+      "entity_name": "PlotData.csv",
+      "dataone_pid": "urn:uuid:2fc48341-36e5-4b87-b75f-654eebe643f0",
+      "size_bytes": 818940,
+      "md5_reported_by_dataone": "2513a3b0fce879eef2f2a228dde88ea1",
+      "md5_verified_locally": "2513a3b0fce879eef2f2a228dde88ea1",
+      "sha256_computed_locally": "e8ef5812ebfa7df233feb62fbaf5009710dd5af6938f47414733e74b1887a915",
+      "format": "text/csv",
+      "role": "one row per plot, with location/environmental covariates"
+    },
+    {
+      "entity_name": "SampleData.csv",
+      "dataone_pid": "urn:uuid:71cf3825-91e1-4ca9-8457-b5eefb1514c4",
+      "size_bytes": 35862,
+      "md5_reported_by_dataone": "85bd098a7c8dc388d6e856f325c33ad1",
+      "md5_verified_locally": "85bd098a7c8dc388d6e856f325c33ad1",
+      "sha256_computed_locally": "71fd709d9df4b2cffa161ce74084cb3c80a2181528445de688880993f33ba882",
+      "format": "text/csv",
+      "role": "one row per study, describing sampling method/metric metadata (study-level granularity, not plot-level)"
+    },
+    {
+      "entity_name": "InsectAbundanceBiomassData.csv",
+      "dataone_pid": "urn:uuid:d5fbebb4-855c-4724-8146-94f8df497480",
+      "size_bytes": 3336200,
+      "md5_reported_by_dataone": "b55a4cfe14e0dd5b2508b24e59c57bf2",
+      "md5_verified_locally": "b55a4cfe14e0dd5b2508b24e59c57bf2",
+      "sha256_computed_locally": "cf86388e9905d25fed8f8d6fb188280f1f4ba272cd3e3441c2610d6339fb5da0",
+      "format": "text/csv",
+      "role": "PRIMARY DATA TABLE: one row per (study, plot, stratum, metric, period, year) observation"
+    },
+    {
+      "entity_name": "A_global_database_of_long_term_changes_in_insect.xml",
+      "dataone_pid": "doi:10.5063/F11V5C9V",
+      "size_bytes": 88855,
+      "sha256_computed_locally": "998a64f72119c636013ca00b9fd1e9c2d49e796a709de7b44481f31dc5320a5c",
+      "format": "eml://ecoinformatics.org/eml-2.1.1",
+      "role": "EML metadata document (dataset-level documentation, not tabular data)"
+    }
+  ],
+  "not_downloaded": [
+    {
+      "entity_name": "References_to_original_data_sources.pdf",
+      "dataone_pid": "urn:uuid:9334fa48-e2bc-40d5-beab-960896cc9736",
+      "reason": "citation-list document, not tabular data needed for this analysis; not required for schema/eligibility/protocol work"
+    },
+    {
+      "entity_name": "ReadMe.docx",
+      "dataone_pid": "urn:uuid:13e63c84-46e1-4054-936b-728936a7c59c",
+      "reason": "prose documentation; EML metadata + direct schema inspection of the CSVs were sufficient for this round"
+    },
+    {
+      "entity_name": "Google_Earth_locations_of_all_datasets.kml",
+      "dataone_pid": "urn:uuid:1f5b5127-0d77-4d21-b80f-b6823bb56391",
+      "reason": "geographic visualization aid, not needed for this round's schema/eligibility work"
+    }
+  ],
+  "manuscript_scale_claims_independent_verification": {
+    "manuscript_claim_observations": 70955,
+    "verified_observations_InsectAbundanceBiomassData_rows": 70955,
+    "manuscript_claim_plots": 1663,
+    "verified_unique_Plot_ID_in_abundance_biomass_table": 1663,
+    "note": "Both headline scale claims were independently confirmed by direct inspection of the downloaded, checksum-verified files, not assumed from the manuscript text (per this round's explicit instruction)."
+  }
+}

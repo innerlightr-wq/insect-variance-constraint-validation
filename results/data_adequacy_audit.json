@@ -1,0 +1,90 @@
+{
+  "files": {
+    "DataSources": {
+      "rows": 166,
+      "columns": 17
+    },
+    "PlotData": {
+      "rows": 1676,
+      "columns": 40
+    },
+    "SampleData": {
+      "rows": 240,
+      "columns": 13
+    },
+    "InsectAbundanceBiomassData": {
+      "rows": 70955,
+      "columns": 7
+    }
+  },
+  "unique_studies_DataSource_ID": 166,
+  "unique_plots_Plot_ID": 1676,
+  "year_coverage": {
+    "min": 1925,
+    "max": 2018
+  },
+  "stratum_field": {
+    "column": "Stratum",
+    "values": {
+      "Air": 39130,
+      "Water": 13768,
+      "Herb layer": 7895,
+      "Soil surface": 6778,
+      "Trees": 2400,
+      "Underground": 984
+    }
+  },
+  "metric_field": {
+    "column": "MetricAB",
+    "values": {
+      "abundance": 64152,
+      "biomass": 6803
+    },
+    "abundance_rows": 64152,
+    "biomass_rows": 6803
+  },
+  "abundance_value_field_Number": {
+    "n_total_abundance_rows": 64152,
+    "n_missing": 8452,
+    "missing_rate": 0.13174959471255768,
+    "n_zero": 2242,
+    "zero_rate_of_non_missing": 0.040251346499102336,
+    "n_negative": 0,
+    "min": 0.0,
+    "max": 5005000.0,
+    "median": 36.0
+  },
+  "sampling_period_field": {
+    "column": "Period",
+    "n_unique_values": 99,
+    "rows_sharing_key_and_year_with_gt1_row_rate": 0.3775520046297785,
+    "note": "Period values observed are consistent with sub-annual (e.g. monthly) sampling occasions within a calendar year, not a validated calendar-month field per se -- see docs/DATA_PROVENANCE.md for the exact source documentation consulted."
+  },
+  "duplicate_records": {
+    "exact_duplicate_rows_in_abundance_biomass_table": 573
+  },
+  "series_mixing_abundance_and_biomass_at_same_key": 169,
+  "abundance_biomass_commensurability": {
+    "pooled_directly": false,
+    "reason": "abundance (counts) and biomass (mass) are different physical quantities on different scales across different original studies -- never pooled into one series or one model; abundance is the frozen primary analysis (Task 5), biomass is reserved for a separately-run sensitivity analysis only."
+  },
+  "sampling_method_stability": {
+    "granularity_available_in_source": "DataSource_ID (study-level), not Plot_ID (plot-level) -- SampleData.csv has no Plot_ID column",
+    "n_studies_with_more_than_one_recorded_sampling_method": 11,
+    "n_studies_total_in_sampledata": 166
+  },
+  "referential_integrity": {
+    "plot_ids_in_abundance_missing_from_plotdata": 1,
+    "datasource_ids_in_plotdata_missing_from_datasources": 0,
+    "plot_datasource_id_mismatches_between_tables": 0,
+    "duplicate_plot_id_rows_in_plotdata": 0,
+    "duplicate_datasource_id_rows_in_datasources": 0
+  },
+  "geographic_fields_present": [
+    "Latitude",
+    "Longitude",
+    "Elevation"
+  ],
+  "taxonomic_field_present": true,
+  "treatment_control_field_present": true
+}
